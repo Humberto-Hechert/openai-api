@@ -1,5 +1,6 @@
-import express from 'express'
-import images from './imagesRoutes.js'
+import express from 'express';
+import images from './imagesRoutes.js';
+import completions from './completionRoutes.js';
 
 const routes = (app) => {
     app.route('/').get((req, res) => {
@@ -8,7 +9,8 @@ const routes = (app) => {
 
     app.use(
         express.json(),
-        images
+        images,
+        completions
         )
 }
 
